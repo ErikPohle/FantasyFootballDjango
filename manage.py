@@ -17,6 +17,8 @@ def main():
     with open('data.json', 'w', encoding='utf-8') as f:
         json.dump(rawData, f, ensure_ascii=False, indent=4)
 
+    analyzeData(rawData)
+
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'FantasyFootballDjango.settings')
     try:
         from django.core.management import execute_from_command_line
